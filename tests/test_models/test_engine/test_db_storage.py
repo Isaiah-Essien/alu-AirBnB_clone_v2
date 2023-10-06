@@ -25,10 +25,10 @@ class TestDBStorage(unittest.TestCase):
 
     def test_user(self):
         """ Tests user """
-        user = User(name="Chyna", email="chyna@gmail.com", password="Chyna12345")
+        user = User(name="isaiah", email="isaiah@gmail.com", password="isaiah7322")
         user.save()
         self.assertFalse(user.id in self.storage.all())
-        self.assertEqual(user.name, "Chyna")
+        self.assertEqual(user.name, "Isaiah")
 
     def test_city(self):
         """ test city """
@@ -56,7 +56,7 @@ class TestDBStorage(unittest.TestCase):
         city.state_id = state.id
         city.save()
 
-        user = User(name="Chyna", email="chyna@gmail.com", password="Chyna12345")
+        user = User(name="isaiah", email="isaiah@gmail.com", password="isaiah7322")
         user.save()
 
         place = Place(name="Palace", number_rooms=4)
@@ -84,7 +84,7 @@ class TestDBStorage(unittest.TestCase):
         city.state_id = state.id
         city.save()
 
-        user = User(name="Chyna", email="chyna@gmail.com", password="Chyna12345")
+        user = User(name="isaiah", email="isaiah@gmail.com", password="isaiah7322")
         user.save()
 
         place = Place(name="Palace", number_rooms=4)
