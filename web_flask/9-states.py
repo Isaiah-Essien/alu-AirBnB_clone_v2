@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-"""Starts a Flask web application"""
+"""
+Starts a Flask web application
+"""
 
 from models import storage
 from models.state import State
@@ -43,4 +45,3 @@ def teardown(self):
 
 if _name_ == '_main_':
     app.run(host='0.0.0.0')
-
