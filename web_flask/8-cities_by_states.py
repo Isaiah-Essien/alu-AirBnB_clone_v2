@@ -7,21 +7,22 @@ from models.state import State
 from flask import Flask
 from flask import render_template
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 
-@app.route('/states_list', strict_slashes=False)
-def states():
+@app.route('/cities_by_states', strict_slashes=False)
+def cities_route():
     """Comment"""
-    return render_template('7-states_list.html',
+    return render_template('8-cities_by_states.html',
                            states=storage.all('State').values())
 
 
 @app.teardown_appcontext
 def teardown(self):
-    """Remove the current SQLAlchemy Session"""
+    """Removes the current SQLAlchemy Session"""
     storage.close()
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(host='0.0.0.0')
+
