@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-"""Starts a Flask web application.
 
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /cities_by_states: HTML page with a list of all states and related cities.
-"""
+"""Starts a Flask web application"""
 
 from models import storage
 from models.amenity import Amenity
@@ -12,7 +8,7 @@ from models.state import State
 from flask import Flask
 from flask import render_template
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route('/hbnb_filters', strict_slashes=False)
@@ -31,5 +27,5 @@ def teardown(self):
     storage.close()
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(host='0.0.0.0')
